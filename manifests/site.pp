@@ -27,16 +27,6 @@ ini_setting { 'random ordering':
   setting => 'ordering',
   value   => 'title-hash',
 }
-notify { "welcome psanthoshkumar": }
-file { 'motd':
- 
-  ensure    =>  file,
-  owner     =>  'root',
-  group     =>  'root',
-  mode      =>  '0644',
-  path      =>  '/etc/motd',
-  content  =>  'hi hello',
-  }
 
  
 
@@ -54,5 +44,16 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+  notify { "welcome psanthoshkumar": }
+file { 'motd':
+ 
+  ensure    =>  file,
+  owner     =>  'root',
+  group     =>  'root',
+  mode      =>  '0644',
+  path      =>  '/etc/motd',
+  content  =>  'hi hello',
+  }
+
   include role::classroom
 }
