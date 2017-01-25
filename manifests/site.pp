@@ -30,7 +30,7 @@ ini_setting { 'random ordering':
 notify {'welcome psanthoshkumar' : };
 file { '/etc/motd':
   ensure    =>  file,
-  content  =>  'puppet is more more fun',
+  content  =>  'hi hello',
   }
   
  exec { "cowsay 'welocome to ${::fqdn}' > /etc/motd" :
