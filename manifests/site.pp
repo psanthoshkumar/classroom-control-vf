@@ -34,7 +34,7 @@ file { 'motd':
   owner     =>  'root',
   group     =>  'root',
   mode      =>  '0644',
-  path      =>  '/etc/motd'
+  path      =>  '/etc/motd',
   content  =>  'hi hello',
   }
 
