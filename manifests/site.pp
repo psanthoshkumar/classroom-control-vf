@@ -27,7 +27,7 @@ ini_setting { 'random ordering':
   setting => 'ordering',
   value   => 'title-hash',
 }
-notify {'welcome psanthoshkumar': }
+notify { "welcome psanthoshkumar": }
 file { 'motd':
  
   ensure    =>  file,
