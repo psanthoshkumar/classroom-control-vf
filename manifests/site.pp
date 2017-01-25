@@ -37,11 +37,7 @@ file { 'motd':
   path      =>  '/etc/motd'
   content  =>  'hi hello',
   }
-  
- exec { "cowsay 'welocome to ${::fqdn}' > /etc/motd":
- path   =>  '/bin:/usr/bin:/usr/local/bin',
- creates    => '/etc/motd',
- }
+
  
 
 # DEFAULT NODE
