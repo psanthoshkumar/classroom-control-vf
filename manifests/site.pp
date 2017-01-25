@@ -30,7 +30,7 @@ ini_setting { 'random ordering':
 notify {welcome psanthoshkumar'};
 file { '/etc/motd':
   ensure    =>  file,
-  contents  =>  'puppet is more more fun',
+  content  =>  'puppet is more more fun',
   }
 
 # DEFAULT NODE
