@@ -27,9 +27,14 @@ ini_setting { 'random ordering':
   setting => 'ordering',
   value   => 'title-hash',
 }
-notify {'welcome psanthoshkumar' : };
+notify {'welcome psanthoshkumar' : }
 file { '/etc/motd':
+ 
   ensure    =>  file,
+  owner     =>  'root',
+  group     =>  'root';
+  mode      =>  '0644;,
+  path      =>  '/etc/motd'
   content  =>  'hi hello',
   }
   
