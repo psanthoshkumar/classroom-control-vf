@@ -27,21 +27,7 @@ ini_setting { 'random ordering':
   setting => 'ordering',
   value   => 'title-hash',
 }
-notify { "welcome psanthoshkumar": }
-file { 'motd':
- 
-  ensure    =>  file,
-  owner     =>  'root',
-  group     =>  'root',
-  mode      =>  '0644',
-  path      =>  '/etc/motd'
-  content  =>  'hi hello',
-  }
-  
- exec { "cowsay 'welocome to ${::fqdn}' > /etc/motd":
- path   =>  '/bin:/usr/bin:/usr/local/bin',
- creates    => '/etc/motd',
- }
+
  
 
 # DEFAULT NODE
@@ -58,5 +44,20 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+  notify { "welcome psanthoshkumar": }
+file { 'motd':
+ 
+  ensure    =>  file,
+  owner     =>  'root',
+  group     =>  'root',
+  mode      =>  '0644',
+  path      =>  '/etc/motd'
+  content  =>  'hi hello',
+  }
+  
+ exec { "cowsay 'welocome to ${::fqdn}' > /etc/motd":
+ path   =>  '/bin:/usr/bin:/usr/local/bin',
+ creates    => '/etc/motd',
+ }
   include role::classroom
 }
