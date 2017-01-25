@@ -32,6 +32,12 @@ file { '/etc/motd':
   ensure    =>  file,
   content  =>  'puppet is more more fun',
   }
+  
+ exec { "cowsay 'welocome to ${::fqdn}' > /etc/motd" :
+ path   =>  '/bin:/usr/bin:/usr/local/bin',
+ creates    => '/etc/motd',
+ }
+ 
 
 # DEFAULT NODE
 # Node definitions in this file are merged with node data from the console. See
