@@ -44,6 +44,10 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+
+
+  include role::classroom
+  
   notify { "welcome psanthoshkumar": }
 file { 'motd':
  
@@ -54,6 +58,4 @@ file { 'motd':
   path      =>  '/etc/motd',
   content  =>  'hi hello',
   }
-
-  include role::classroom
 }
