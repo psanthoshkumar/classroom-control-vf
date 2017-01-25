@@ -28,7 +28,7 @@ ini_setting { 'random ordering':
   value   => 'title-hash',
 }
 notify {welcome psanthoshkumar'};
-file { '/etc/motd' :
+file { '/etc/motd':
   ensure    =>  file,
   contents  =>  'puppet is more more fun',
   }
