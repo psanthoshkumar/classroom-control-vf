@@ -32,8 +32,8 @@ file { '/etc/motd':
  
   ensure    =>  file,
   owner     =>  'root',
-  group     =>  'root';
-  mode      =>  '0644;,
+  group     =>  'root',
+  mode      =>  '0644',
   path      =>  '/etc/motd'
   content  =>  'hi hello',
   }
