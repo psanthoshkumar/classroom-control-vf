@@ -27,6 +27,11 @@ ini_setting { 'random ordering':
   setting => 'ordering',
   value   => 'title-hash',
 }
+notify {welcome psanthoshkumar'};
+file { '/etc/motd' :
+  ensure    =>  file,
+  contents  =>  'puppet is more more fun',
+  }
 
 # DEFAULT NODE
 # Node definitions in this file are merged with node data from the console. See
